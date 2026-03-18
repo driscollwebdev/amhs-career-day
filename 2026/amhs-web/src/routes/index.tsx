@@ -7,8 +7,10 @@ export const Route = createFileRoute('/')({
 
 function Home() {
   return (
-    <div className="p-2">
-      <h3>Welcome Home!</h3>
+    <div className="w-full">
+      <div className="text-xl font-bold text-black">
+        Welcome to Avon Middle High School
+      </div>
     </div>
   )
 }
