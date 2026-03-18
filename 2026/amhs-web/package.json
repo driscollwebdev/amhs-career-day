@@ -1,33 +1,28 @@
 {
-  "name": "tanstack-start-example-supabase-basic",
+  "name": "tanstack-router-react-example-basic-file-based",
   "private": true,
-  "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "vite --port 3000",
     "build": "vite build && tsc --noEmit",
     "preview": "vite preview",
-    "start": "pnpx srvx --prod -s ../client dist/server/server.js"
+    "start": "vite"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@supabase/ssr": "^0.5.2",
-    "@supabase/supabase-js": "^2.48.1",
+    "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-router": "^1.167.4",
     "@tanstack/react-router-devtools": "^1.166.9",
-    "@tanstack/react-start": "^1.166.16",
+    "@tanstack/router-plugin": "^1.166.13",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "redaxios": "^0.5.1"
+    "redaxios": "^0.5.1",
+    "tailwindcss": "^4.1.18",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^6.0.1",
-    "tailwindcss": "^4.1.18",
     "typescript": "^5.7.2",
     "vite": "^8.0.0"
   }

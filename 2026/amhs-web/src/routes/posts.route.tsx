@@ -1,12 +1,14 @@
-import { Link, Outlet, createFileRoute } from '@tanstack/react-router'
-import { fetchPosts } from '../../utils/posts'
+import { createFileRoute } from '@tanstack/react-router'
+import * as React from 'react'
+import { Link, Outlet } from '@tanstack/react-router'
+import { fetchPosts } from '../posts'
 
-export const Route = createFileRoute('/_authed/posts')({
-  loader: () => fetchPosts(),
-  component: PostsComponent,
+export const Route = createFileRoute('/posts')({
+  loader: fetchPosts,
+  component: PostsLayoutComponent,
 })
 
-function PostsComponent() {
+function PostsLayoutComponent() {
   const posts = Route.useLoaderData()
 
   return (
@@ -21,8 +23,8 @@ function PostsComponent() {
                   params={{
                     postId: post.id,
                   }}
-                  className="block py-1 text-blue-800 hover:text-blue-600"
-                  activeProps={{ className: 'text-black font-bold' }}
+                  className="block py-1 text-blue-600 hover:opacity-75"
+                  activeProps={{ className: 'font-bold underline' }}
                 >
                   <div>{post.title.substring(0, 20)}</div>
                 </Link>
